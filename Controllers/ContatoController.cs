@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ControleDeContatos.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,12 @@ namespace ControleDeContatos.Controllers
         public IActionResult ApagarConfirmacao()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Criar(ContatoModel contato)
+        {
+
         }
     }
 }
