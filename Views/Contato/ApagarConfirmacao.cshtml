@@ -1,11 +1,27 @@
-﻿@{
+﻿@model ContatoModel
+@{
     ViewData["Title"] = "Confirmação de apagar o contato";
 }
-<div class="text-center">
-    <h3>Deseja realmente apagar o contato(Renan Arthur)</h3>
+<div class="modal" id="ModalApagarConfirmacao" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deseja realmente apagar o contato</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" asp-controller="Contato" asp-action="Index">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="text-center">
-    <a class="btn btn-primary d-grid gap-2 d-md-flex justify-content-md-center" role="button" asp-controller="Contato" asp-action="Index">Cancelar exclusão</a>
-    <a class="btn btn-danger d-grid gap-2 d-md-flex justify-content-md-center" role="button">Confirmar exclusão</a>
-</div>   
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalApagarConfirmacao">
+    Launch demo modal
+</button>
