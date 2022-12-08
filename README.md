@@ -1,5 +1,5 @@
 <h1>ControleDeContatos</h1>
-<h3>Nesse projeto estarei criando um sistemas de cadastro de contatos, onde o usuário poderá Registrar, Atualizar, Deletar e Consultar contatos.</h3>
+<h3>Nesse projeto estarei criando um sistemas de cadastro de contatos, implementando o CRUD: Create, Read, Update, Delete.</h3>
 
 
 ## **Frameworks:**
