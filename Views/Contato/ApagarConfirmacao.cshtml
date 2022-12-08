@@ -2,7 +2,9 @@
 @{
     ViewData["Title"] = "Confirmação de apagar o contato";
 }
-<div class="modal" id="ModalApagarConfirmacao" tabindex="-1" role="dialog">
+
+
+<div class="" id="ModalApagarConfirmacao" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,16 +14,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Modal body text goes here.</p>
+                <p>Nome: @Model.Nome</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" asp-controller="Contato" asp-action="Index">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a class="btn btn-primary" asp-controller="Contato" asp-action="Index" role="button">Cancelar</a>
+                <a class="btn btn-secondary" asp-controller="Contato" asp-action="Apagar" asp-route-id="@Model.Id" role="button">Apagar</a>
             </div>
         </div>
     </div>
 </div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalApagarConfirmacao">
-    Launch demo modal
-</button>
