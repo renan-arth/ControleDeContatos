@@ -2,19 +2,27 @@
 @{
     ViewData["Title"] = "Listagem de contatos";
 }
+
+<div class="text-center notify">
+
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="notification-success" role="alert">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+    else if (TempData["MensagemErro"] != null)
+    {
+        <div class="notification-danger" role="alert">
+            @TempData["MensagemErro"]
+        </div>
+    }
+</div>
 <div class="text-center">
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Criar">Adicionar novo contato</a>
     </div>
     <br />
-
-    <div class="alert alert-success" role="alert">
-        This is a success alert-check it out!
-    </div>
-
-    <div class="alert alert-danger" role="alert">
-        This is a success alert-check it out!
-    </div>
 
     <h1 class="display-4">Listagem de contatos</h1>
 
