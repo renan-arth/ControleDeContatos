@@ -26,7 +26,7 @@
 
     <h1 class="display-4">Listagem de contatos</h1>
 
-    <table class="table">
+    <table class="table" id="table-contatos">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -54,6 +54,12 @@
                         </td>
                     </tr>
                 }
+            }
+            else
+            {
+                <tr class="add">
+                    <td valign="top" colspan="5">Nenhum contato encontrado</td>
+                </tr>
             }
         </tbody>
     </table>
