@@ -6,3 +6,10 @@
     <h1 class="display-4">Bem vindo!</h1>
     <p>Sistem de Controle de Contatos.</p>
 </div>
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="notification-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}

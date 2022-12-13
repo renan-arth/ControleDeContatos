@@ -75,37 +75,41 @@ body {
 }
 
 .notification-success {
+    box-shadow: 3px 3px 5px grey;
+    color: white;
+    text-align: center;
     border-radius: 10px;
     text-align: center;
-    top: -100px;
+    top: -200px;
     margin: auto;
     width: 400px;
-    height: 50px;
+    padding: 10px;
     background-color: darkseagreen;
     position: relative;
-    animation: notification-success 5s 2;
+    animation: notification-success 15s;
 }
 
 .notification-danger {
+    box-shadow: 3px 3px 5px grey;
+    color: white;
+    text-align: center;
     border-radius: 10px;
     text-align: center;
-    top: -100px;
+    top: -300px;
     margin: auto;
     width: 400px;
-    height: 50px;
+    padding: 10px;
     background-color: indianred;
     position: relative;
-    animation: notification-danger 5s 2;
+    animation: notification-danger 15s;
 }
 
 @keyframes notification-success {
   0%   { right: auto; top: -500px;}
-  25%  { right: auto; top: 100px;}
-  50%   { right: auto; top: -500px;}
+  25%  { right: auto; top: 50px;}
 }
 
 @keyframes notification-danger {
   0%   { right: auto; top: -500px;}
-  25%  { right: auto; top: 100px;}
-  50%   { right: auto; top: -500px;}
+  25%  { right: auto; top: 50px;}
 }
