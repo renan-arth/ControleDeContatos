@@ -69,3 +69,43 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.field-validation-error{
+    color: #e01d1d;
+}
+
+.notification-success {
+    border-radius: 10px;
+    text-align: center;
+    top: -100px;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    background-color: darkseagreen;
+    position: relative;
+    animation: notification-success 5s 2;
+}
+
+.notification-danger {
+    border-radius: 10px;
+    text-align: center;
+    top: -100px;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    background-color: indianred;
+    position: relative;
+    animation: notification-danger 5s 2;
+}
+
+@keyframes notification-success {
+  0%   { right: auto; top: -500px;}
+  25%  { right: auto; top: 100px;}
+  50%   { right: auto; top: -500px;}
+}
+
+@keyframes notification-danger {
+  0%   { right: auto; top: -500px;}
+  25%  { right: auto; top: 100px;}
+  50%   { right: auto; top: -500px;}
+}
