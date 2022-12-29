@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControleDeContatos.Models
 {
-    public class ContatoModel
+    public class ContatoModel: BaseModel
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Digite o nome do contato")]
