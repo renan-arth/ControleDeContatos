@@ -74,6 +74,7 @@ body {
     color: #e01d1d;
 }
 
+/*Notificação de sucesso e erro*/
 .notification-success {
     box-shadow: 3px 3px 5px grey;
     color: white;
