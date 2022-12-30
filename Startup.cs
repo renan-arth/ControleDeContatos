@@ -1,5 +1,7 @@
 using ControleDeContatos.Data;
 using ControleDeContatos.Repositorio;
+using ControleDeContatos.Repositorio.Contato;
+using ControleDeContatos.Repositorio.Users;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +31,7 @@ namespace ControleDeContatos
             services.AddEntityFrameworkSqlServer()
                     .AddDbContext<BancoContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DataBase")));
             services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+            services.AddScoped<IUserRepositorio, UserRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

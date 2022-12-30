@@ -1,5 +1,5 @@
 ﻿using ControleDeContatos.Models;
-using ControleDeContatos.Repositorio;
+using ControleDeContatos.Repositorio.Contato;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

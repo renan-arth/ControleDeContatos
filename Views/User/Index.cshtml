@@ -5,6 +5,10 @@
 
 <div class="text-center notify">
 
+    <div class="text-center">
+        <a class="btn btn-primary" asp-controller="User" asp-action="Criar">Adicionar novo usuário</a>
+    </div>
+
     @if (TempData["MensagemSucesso"] != null)
     {
         <div class="notification-success" role="alert">
@@ -20,7 +24,7 @@
 </div>
 <div class="text-center">
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="Criar">Adicionar novo usuário</a>
+        <a class="btn btn-primary" role="button" asp-controller="User" asp-action="Criar">Adicionar novo usuário</a>
     </div>
     <br />
 
@@ -48,6 +52,7 @@
                         <td>@usuario.Login</td>
                         <td>@usuario.Email</td>
                         <td>@usuario.CreationDate</td>
+                        <td value="@usuario.Senha">************</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="User" asp-action="Editar">Editar</a>

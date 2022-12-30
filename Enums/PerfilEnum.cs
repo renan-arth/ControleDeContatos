@@ -7,7 +7,7 @@ namespace ControleDeContatos.Enums
 {
     public enum PerfilEnum
     {
-        Padrão = 0,
+        Padrao = 0,
         Admin = 1
     }
 }
