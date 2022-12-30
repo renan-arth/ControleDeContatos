@@ -37,8 +37,9 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
+                <th scope="col">Senha</th>
                 <th scope="col">Data de Cadastro</th>
-                <th scope="col"></th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -46,20 +47,20 @@
             {
                 foreach (UserModel usuario in Model)
                 {
-                    <tr>
-                        <th scope="row">@usuario.Id</th>
-                        <td>@usuario.Nome</td>
-                        <td>@usuario.Login</td>
-                        <td>@usuario.Email</td>
-                        <td>@usuario.CreationDate</td>
-                        <td value="@usuario.Senha">************</td>
-                        <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="User" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="User" asp-action="ApagarConfirmacao">Apagar</a>
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+                <th scope="col">@usuario.Id</th>
+                <td scope="col">@usuario.Nome</td>
+                <td scope="col">@usuario.Login</td>
+                <td scope="col">@usuario.Email</td>
+                <td scope="col">@usuario.Senha</td>
+                <td scope="col">@Convert.ToDateTime(usuario.CreationDate)</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="User" asp-action="Editar">Editar</a>
+                        <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="User" asp-action="ApagarConfirmacao">Apagar</a>
+                    </div>
+                </td>
+            </tr>
                 }
             }
             else

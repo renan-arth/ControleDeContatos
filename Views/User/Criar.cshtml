@@ -28,17 +28,17 @@
     </div>
 
     <div class="mb-3">
-        <label for="Perfil" class="form-label">Perfil</label>
-        <select class="form-select" aria-label="select example">
+        <label for="Perfil" class="form-label">Perfil:</label>
+        <select asp-for="Perfil" class="form-control">
             <option selected>Selecione</option>
             <option value="@PerfilEnum.Padrao">Padrão</option>
-            <option value="@PerfilEnum.Admin">Admin</option>
+            <option value="@PerfilEnum.Admin">Administrador</option>
         </select>
     </div>
 
     <div class="mb-3">
         <label for="Senha" class="form-label">Senha:</label>
-        <input type="text" asp-for="Senha" class="form-control" placeholder="Digite a senha do usuário!">
+        <input type="password" asp-for="Senha" class="form-control" placeholder="Digite a senha do usuário!">
         @Html.ValidationMessageFor(x => x.Senha)
     </div>
 
