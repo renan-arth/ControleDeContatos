@@ -33,7 +33,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Email</th>
-                <th scope="col">Senha</th>
+                <th scope="col">Perfil</th>
                 <th scope="col">Data de Cadastro</th>
                 <th scope="col">Ações</th>
             </tr>
@@ -48,8 +48,8 @@
                 <td scope="col">@usuario.Nome</td>
                 <td scope="col">@usuario.Login</td>
                 <td scope="col">@usuario.Email</td>
-                <td scope="col">@usuario.Senha</td>
-                <td scope="col">@Convert.ToDateTime(usuario.CreationDate)</td>
+                <td scope="col">@usuario.Perfil</td>
+                <td scope="col">@usuario.CreationDate</td>
                 <td>
                     <div class="btn-group" role="group">
                         <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="User" asp-action="Editar">Editar</a>

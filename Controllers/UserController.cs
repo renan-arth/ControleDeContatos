@@ -103,7 +103,7 @@ namespace ControleDeContatos.Controllers
                     };
 
                     usuario = _userRepositorio.Atualizar(usuario);
-                    TempData["MensagemSucesso"] = "Contato atualizado com sucesso!";
+                    TempData["MensagemSucesso"] = "Usuário atualizado com sucesso!";
                     return RedirectToAction("Index");
                 }
 
@@ -111,7 +111,7 @@ namespace ControleDeContatos.Controllers
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos altualizar seu contato, tente novamente, detalhe do erro: {ex.Message}";
+                TempData["MensagemErro"] = $"Ops, não conseguimos altualizar seu usuário, tente novamente, detalhe do erro: {ex.Message}";
                 return RedirectToAction("Index");
             }
         }
